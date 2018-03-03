@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grid xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+      WidthRequest="80" HeightRequest="110" Padding="0"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+            xmlns:shapes="clr-namespace:Xamarin.Forms.Shapes;assembly=Xamarin.Forms.Shapes"
+            x:Class="Flexibility.Shared.FoodItemView">
+    <Grid.Resources>
+        
+        <Style x:Key="FAFontStyle" TargetType="Label">  
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="UWP" Value="Segoe MDL2 Assets"></On>
+                        <On Platform="iOS" Value="FontAwesome"></On>
+                        <On Platform="Android" Value="FontAwesome.otf#FontAwesome"></On>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontSize">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="24"></On>
+                        <On Platform="WinRT, UWP, Android" Value="18"></On>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="VerticalTextAlignment"
+                        Value="Center" />
+            <Setter Property="HorizontalTextAlignment"
+                        Value="Center" />
+        </Style> 
+    </Grid.Resources>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="80"/>
+        <RowDefinition Height="20"/>
+    </Grid.RowDefinitions>
+
+    <shapes:Ellipse Margin="5" 
+                    Grid.Row="0" 
+                    WidthRequest="80" 
+                    HeightRequest="80" Fill="Black"/>    
+     <Label 
+        Style="{StaticResource FAFontStyle}" TextColor="White"
+        Grid.Row="0" Text="&#xf13d;" />
+    <Label Text="Food Name" Grid.Row="1" HeightRequest="20" FontSize="12" HorizontalTextAlignment="Center"/>
+
+
+
+</Grid>

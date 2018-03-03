@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.59.3" />
+    <PackageReference Include="SkiaSharp" Version="1.59.3" />
+    <PackageReference Include="SkiaSharp.Views" Version="1.59.3" />
+    <PackageReference Include="Xamarin.Forms" Version="2.6.0.237317-nightly" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\work\Shapes\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes.csproj" />
+  </ItemGroup>
+</Project>

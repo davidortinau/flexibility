@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>7716bbc3-f348-40f7-99a1-3cf58ea91fc6</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.Forms.Shapes.WinRT.Win2D</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)EllipseCanvasControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EllipseRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LineCanvasControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LineRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeTransform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PathCanvasControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PathRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PolygonCanvasControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PolygonRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PolylineCanvasControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PolylineRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RectangleCanvasControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RectangleRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShapeCanvasControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShapeRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shapes.cs" />
+  </ItemGroup>
+</Project>

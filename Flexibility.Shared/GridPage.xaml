@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flexibility.Shared.GridPage">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            
+            .section-title {
+                color: #778;
+                font-style: bold;
+                font-size: 20;
+                margin: 6 0 0 6;
+            }
+            .grid {
+                flex-wrap: wrap;
+                flex-direction: row;
+                align-items: stretch;
+                height: 180;
+            }
+            .grid-cell {
+                flex-grow: 0;
+                background-color: #eed;
+                text-align: center;
+                font-size: small;
+                color: #556;
+                height: 80;
+                vertical-text-alignment: center;
+            
+            }
+            .full { flex-basis: 100%; }
+            .half { flex-basis: 50%; background-color: cornflowerblue; }
+            .third { flex-basis: 33.33%; background-color: pink; }
+            .fourth { flex-basis: 25%; background-color: lightblue; }
+            .auto { flex-grow: 1; background-color: coral;}
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+     <ScrollView>
+        <StackLayout>
+            <Label Text="Basic Grids" StyleClass="section-title"/>
+            <FlexLayout StyleClass="grid">
+              <Label StyleClass="grid-cell, full" Text="Full"/>
+              <Label StyleClass="grid-cell, half" Text="1/2" />
+              <Label StyleClass="grid-cell, half" Text="1/2" />
+              <Label StyleClass="grid-cell, fourth" Text="1/4" />
+              <Label StyleClass="grid-cell, half" Text="1/2" />
+              <Label StyleClass="grid-cell, fourth" Text="1/4" />
+              <Label StyleClass="grid-cell, third" Text="1/3" />
+              <Label StyleClass="grid-cell, third" Text="1/3" />
+              <Label StyleClass="grid-cell, third" Text="1/3" />
+              <Label StyleClass="grid-cell, fourth" Text="1/4" />
+              <Label StyleClass="grid-cell, fourth" Text="1/4" />
+              <Label StyleClass="grid-cell, fourth" Text="1/4" />
+              <Label StyleClass="grid-cell, fourth" Text="1/4" />
+              <Label StyleClass="grid-cell, fourth" Text="1/4" />
+              <Label StyleClass="grid-cell, third" Text="1/3" />
+              <Label StyleClass="grid-cell, auto" Text="left-over" />
+            </FlexLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

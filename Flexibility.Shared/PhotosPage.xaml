@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flexibility.Shared.PhotosPage"
+             >
+
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+
+            .flex {
+                flex-direction: row;
+                flex-wrap: wrap;
+                flex-align-items: stretch;
+                flex-align-content: start;
+            }
+            
+            .photo {
+                flex-basis: 33.33%;
+                height: 100;
+            }
+
+            .half {
+                flex-basis: 50%;
+                height: 150;
+            }
+
+            .full {
+                flex-basis: 100%;
+                height: 200;
+            }
+
+            Image {
+                background-color: #f1f1f1; 
+            }
+
+            ]]>
+        </StyleSheet>
+        
+    </ContentPage.Resources>
+    <ScrollView>
+        <FlexLayout StyleClass="flex">
+            <Image Source="m_01.jpg"
+                   StyleClass="photo"
+                   Aspect="AspectFill" />
+
+            <Image Source="m_02.jpg" 
+                   StyleClass="photo"
+                   Aspect="AspectFill" />
+            
+            <Image Source="m_04.png" 
+                   Aspect="AspectFill"
+                   StyleClass="photo" />
+            
+            <Image Source="m_03.png"
+               Aspect="AspectFill" 
+               StyleClass="photo, full" />
+            
+            <Image Source="m_05.jpg" 
+                   Aspect="AspectFill"
+                   StyleClass="photo" />
+            
+            <Image Source="m_06.jpg" 
+                   Aspect="AspectFill"
+                   StyleClass="photo" />
+            
+            <Image Source="m_07.jpg"
+                   Aspect="AspectFill" 
+                   StyleClass="photo" />
+            
+            <Image Source="m_08.jpg" 
+                   Aspect="AspectFill"
+                   StyleClass="photo, half" />
+            
+            <Image Source="m_09.jpg" 
+                   Aspect="AspectFill"
+                   StyleClass="photo, half" />
+            
+            <Image Source="m_10.jpg"
+                   Aspect="AspectFill" 
+                   StyleClass="photo" />
+            
+            <Image Source="m_11.jpeg" 
+                   Aspect="AspectFill"
+                   StyleClass="photo"
+                     />
+            <Image Source="m_12.jpg" 
+                   Aspect="AspectFill"
+                   StyleClass="photo" />
+            
+            <Image Source="m_13.jpg"
+                   Aspect="AspectFill" 
+                   StyleClass="photo, full" />
+            
+            <Image Source="m_14.jpg" 
+                   Aspect="AspectFill"
+                   StyleClass="photo"/>
+            
+            <Image Source="cat_15.jpg" 
+                   Aspect="AspectFill"
+                   StyleClass="photo"/>
+            
+            <Image Source="cat_16.jpg"
+                   Aspect="AspectFill" 
+                   StyleClass="photo" />
+            
+            <Image Source="cat_17.jpg"
+                   Aspect="AspectFill" 
+                   StyleClass="photo" />
+            
+            <Image Source="cat_18.jpg"
+                   Aspect="AspectFill" 
+                   StyleClass="photo" />
+            
+            <Image Source="cat_19.jpg"
+                   Aspect="AspectFill" 
+                   StyleClass="photo" />
+            
+            
+            
+
+        </FlexLayout>
+    </ScrollView>
+    
+</ContentPage>

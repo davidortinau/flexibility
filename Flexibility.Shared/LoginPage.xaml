@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Flexibility.Shared.LoginPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+    ios:Page.LargeTitleDisplay="Never"
+             >
+    <ContentPage.Resources>
+        <Style TargetType="Entry">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList x:Name="CommonStates">
+                    <VisualStateGroup>
+                        <VisualState x:Name="Valid">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="White"></Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Invalid">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Red"></Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+        <StyleSheet>
+            <![CDATA[
+            .body {
+                color: #fff;
+                align-items: center;
+                justify-content: center;
+                background-color: #16222a;
+            }
+            .container {
+                background-color: rgba(58,63,68,0.5);
+                width:300;
+                height:340;
+                flex-direction: column;
+
+            }
+            .login-form {
+                height:260;
+                flex-direction: column;
+                margin-top: 20;
+            }
+            .logo {
+                font-size: 20;
+                margin-top: 40;
+                text-align: center;
+            }
+            entry {
+                height:50;
+                margin: 10 20 0;
+                color: #333;
+            }
+            button {
+                background-color: #CC00;
+                margin: 25 20 0;
+            }
+
+            .Valid {
+                background-color: #fff;
+            }
+
+            .InValid {
+                background-color: #ff0000;
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    <FlexLayout StyleClass="body">
+        <FlexLayout StyleClass="container">
+            <Label Text="Hello, Flex" StyleClass="logo"/>
+            <FlexLayout StyleClass="login-form">
+                <Entry x:Name="UserNameEntry" Placeholder="UserName" />
+                <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="true"/>
+                <Button Text="Log in" Clicked="Handle_Clicked"/>
+            </FlexLayout>
+        </FlexLayout>
+    </FlexLayout>
+</ContentPage>

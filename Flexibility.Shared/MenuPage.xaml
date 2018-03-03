@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Padding="0,40,0,0"
+             Title="Menu" 
+             Icon="hamburger.png"
+             xmlns:local="using:Flexibility.Shared"
+             xmlns:models="using:Flexibility.Shared.Models"
+             x:Class="Flexibility.Shared.MenuPage">
+    <StackLayout>
+        <ListView x:Name="listView">
+           <ListView.ItemsSource>
+                <x:Array Type="{x:Type models:MasterPageItem}">
+                    <models:MasterPageItem Title="Login" IconSource="" TargetType="{x:Type local:LoginPage}" />
+                    <models:MasterPageItem Title="Grid" IconSource="" TargetType="{x:Type local:GridPage}" />
+                    <models:MasterPageItem Title="Photos" IconSource="" TargetType="{x:Type local:PhotosPage}" />
+                    <models:MasterPageItem Title="Achievements" IconSource="" TargetType="{x:Type local:FoodPage}" />
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

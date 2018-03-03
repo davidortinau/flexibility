@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e2000c13-f5eb-42eb-b0a3-e851bd533357</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.Forms.Shapes.WinRT</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)EllipseRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LineRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeBrush.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeGeometry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeTransform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PathRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PolygonRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PolylineRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RectangleRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShapeRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Shapes.cs" />
+  </ItemGroup>
+</Project>
