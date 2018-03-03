@@ -14,4 +14,18 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\work\Shapes\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="FoodPage.xaml.cs">
+      <DependentUpon>AchievementsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AchievementsPage.xaml.cs">
+      <DependentUpon>AchievementsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="FoodItemView.xaml.cs">
+      <DependentUpon>AchievementView.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AchievementView.xaml.cs">
+      <DependentUpon>AchievementView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

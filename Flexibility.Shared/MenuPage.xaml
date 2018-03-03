@@ -14,7 +14,7 @@
                     <models:MasterPageItem Title="Login" IconSource="" TargetType="{x:Type local:LoginPage}" />
                     <models:MasterPageItem Title="Grid" IconSource="" TargetType="{x:Type local:GridPage}" />
                     <models:MasterPageItem Title="Photos" IconSource="" TargetType="{x:Type local:PhotosPage}" />
-                    <models:MasterPageItem Title="Achievements" IconSource="" TargetType="{x:Type local:FoodPage}" />
+                    <models:MasterPageItem Title="Achievements" IconSource="" TargetType="{x:Type local:AchievementsPage}" />
                 </x:Array>
             </ListView.ItemsSource>
             <ListView.ItemTemplate>

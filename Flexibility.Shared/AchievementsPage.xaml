@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="using:Flexibility.Shared"
-             xmlns:shapes="clr-namespace:Xamarin.Forms.Shapes;assembly=Xamarin.Forms.Shapes"
-             x:Class="Flexibility.Shared.FoodPage"
+             x:Class="Flexibility.Shared.AchievementsPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true" Title="Achievements">
     <ContentPage.Resources>
@@ -56,15 +55,15 @@
                 StyleClass="grid"
                 x:Name="MyLayout" >
 
-                <local:FoodItemView StyleClass="achievement" />
-                <local:FoodItemView StyleClass="achievement" />
-                <local:FoodItemView StyleClass="achievement" />
-                <local:FoodItemView StyleClass="achievement" />
-                <local:FoodItemView StyleClass="achievement" />
-                <local:FoodItemView StyleClass="achievement" />
-                <local:FoodItemView StyleClass="achievement" />
-                <local:FoodItemView StyleClass="achievement" />
-                <local:FoodItemView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" />
 
             </FlexLayout>
         </ScrollView>
