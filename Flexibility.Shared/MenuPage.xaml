@@ -7,6 +7,24 @@
              xmlns:local="using:Flexibility.Shared"
              xmlns:models="using:Flexibility.Shared.Models"
              x:Class="Flexibility.Shared.MenuPage">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+                ^ContentPage {
+                    background-color: rgba(58,63,68,1);
+                }
+
+                ListView {
+                    background-color: transparent;
+                }
+
+                Label {
+                    color: #f1f1f1;
+                }
+            ]]>
+        </StyleSheet>
+        
+    </ContentPage.Resources>
     <StackLayout>
         <ListView x:Name="listView">
            <ListView.ItemsSource>

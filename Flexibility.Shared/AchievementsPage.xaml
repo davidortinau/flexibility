@@ -55,15 +55,18 @@
                 StyleClass="grid"
                 x:Name="MyLayout" >
 
-                <local:AchievementView StyleClass="achievement" />
-                <local:AchievementView StyleClass="achievement" />
-                <local:AchievementView StyleClass="achievement" />
-                <local:AchievementView StyleClass="achievement" />
-                <local:AchievementView StyleClass="achievement" />
-                <local:AchievementView StyleClass="achievement" />
-                <local:AchievementView StyleClass="achievement" />
-                <local:AchievementView StyleClass="achievement" />
-                <local:AchievementView StyleClass="achievement" />
+                <local:AchievementView StyleClass="achievement" Achievement="First Issue" Icon="&#xf1fc;" IsAchieved="true" />
+                <local:AchievementView StyleClass="achievement" Achievement="First PR" Icon="&#xf109;" IsAchieved="true" />
+                <local:AchievementView StyleClass="achievement" Achievement="Masher" Icon="&#xf255;" IsAchieved="false" />
+
+                <local:AchievementView StyleClass="achievement" Achievement="Novice Contributor" Icon="&#xf3a5;" IsAchieved="true" />
+                <local:AchievementView StyleClass="achievement" Achievement="Reviewer" Icon="&#xf075;" IsAchieved="true" />
+                <local:AchievementView StyleClass="achievement" Achievement="Tester" Icon="&#xf05b;" IsAchieved="false" />
+
+                <local:AchievementView StyleClass="achievement" Achievement="Frequent Contrib" Icon="&#xf1c9;" IsAchieved="false" />
+                <local:AchievementView StyleClass="achievement" Achievement="Lab Master" Icon="&#xf0c3;" IsAchieved="false" />
+                <local:AchievementView StyleClass="achievement" Achievement="Architect" Icon="&#xf015;" IsAchieved="false" />
+
 
             </FlexLayout>
         </ScrollView>

@@ -35,14 +35,15 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         <RowDefinition Height="20"/>
     </Grid.RowDefinitions>
 
-    <shapes:Ellipse Margin="5" 
+    <shapes:Ellipse x:Name="Circle"
+                    Margin="5" 
                     Grid.Row="0" 
                     WidthRequest="80" 
                     HeightRequest="80" Fill="Black"/>    
      <Label 
         Style="{StaticResource FAFontStyle}" TextColor="White"
-        Grid.Row="0" Text="&#xf13d;" />
-    <Label Text="Food Name" Grid.Row="1" HeightRequest="20" FontSize="12" HorizontalTextAlignment="Center"/>
+        Grid.Row="0" Text="{Binding Icon}" />
+    <Label Text="{Binding Achievement}" Grid.Row="1" HeightRequest="20" FontSize="12" HorizontalTextAlignment="Center"/>
 
 
 

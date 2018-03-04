@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <deployment identifier="iOS" />
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530" />
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -10,18 +10,70 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb" />
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok" />
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600" />
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite" />
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" customColorSpace="sRGB" colorSpace="calibratedRGB" red="0.086274509803921567" green="0.13333333333333333" blue="0.16470588235294117" alpha="1"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="199" translatesAutoresizingMaskIntoConstraints="NO" image="splash-xamagon">
+                                <rect key="frame" x="87" y="304" width="240" height="128"/>
+                                <constraints>
+                                    <constraint id="200" firstItem="199" firstAttribute="width" constant="240"/>
+                                    <constraint id="201" firstItem="199" firstAttribute="height" constant="128"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="405" firstItem="199" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX"/>
+                            <constraint id="406" firstItem="199" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder" />
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375" />
+            <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat_10.jpg" width="224" height="149"/>
+        <image name="cat_1.jpg" width="224" height="149"/>
+        <image name="cat_2.jpg" width="134" height="101"/>
+        <image name="cat_3.jpg" width="151" height="224"/>
+        <image name="cat_4.jpg" width="224" height="149"/>
+        <image name="cat_5.jpg" width="224" height="168"/>
+        <image name="cat_6.jpg" width="224" height="168"/>
+        <image name="cat_7.jpg" width="179" height="128"/>
+        <image name="cat_8.jpg" width="224" height="126"/>
+        <image name="cat_9.jpg" width="224" height="188"/>
+        <image name="cat_11.jpg" width="224" height="149"/>
+        <image name="cat_12.jpg" width="179" height="119"/>
+        <image name="cat_13.jpg" width="179" height="166"/>
+        <image name="cat_14.jpg" width="134" height="89"/>
+        <image name="cat_15.jpg" width="224" height="168"/>
+        <image name="cat_16.jpg" width="224" height="124"/>
+        <image name="cat_17.jpg" width="215" height="224"/>
+        <image name="cat_18.jpg" width="320" height="213"/>
+        <image name="cat_19.jpg" width="160" height="107"/>
+        <image name="m_11.jpeg" width="768" height="1024"/>
+        <image name="m_10.jpg" width="600" height="360"/>
+        <image name="m_06.jpg" width="1200" height="900"/>
+        <image name="m_09.jpg" width="1023" height="1023"/>
+        <image name="m_13.jpg" width="1024" height="768"/>
+        <image name="m_12.jpg" width="736" height="552"/>
+        <image name="m_15.jpg" width="648" height="486"/>
+        <image name="m_14.jpg" width="236" height="236"/>
+        <image name="m_03.png" width="536" height="302"/>
+        <image name="m_01.jpg" width="1024" height="819"/>
+        <image name="m_04.png" width="960" height="540"/>
+        <image name="m_08.jpg" width="600" height="450"/>
+        <image name="m_02.jpg" width="1600" height="1200"/>
+        <image name="m_05.jpg" width="1228" height="816"/>
+        <image name="m_07.jpg" width="2448" height="2448"/>
+        <image name="hamburger.png" width="14" height="15"/>
+        <image name="ragnarok.jpg" width="1136" height="476"/>
+        <image name="splash-xamagon" width="128" height="128"/>
+    </resources>
 </document>

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Flexibility.Shared.ShowPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Flexibility.Shared.ShowPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.LargeTitleDisplay="Never"
+             ios:Page.UseSafeArea="true"
+             >
 <ContentPage.Resources>
         <Style x:Key="FAStyle" TargetType="Label">  
             <Setter Property="FontFamily">
@@ -15,8 +21,12 @@
         
         <StyleSheet>
             <![CDATA[
+            ^ContentPage {
+                background-color: #16222a;
+            }
+            
             .content{
-                background-color: black;
+
             }
             
             .poster {
@@ -24,7 +34,6 @@
             }
 
             .summary {
-                background-color: black;
                 flex-direction: row;
                 justify-content: spacebetween;
                 height: 20;
@@ -32,7 +41,7 @@
             }
 
             .popularity {
-                color: red;
+                color: #CC0000;
             }
 
             .year, .rating, .length {
@@ -46,18 +55,18 @@
             }
 
             .title {
-                color: #ffffff;
+                color: #f1f1f1;
                 font-size: 24;
             }
 
             .description {
-                color: #ffffff;
+                color: #ccc;
                 margin: 10,0,10,10;
             }
 
             .action {
-                color: #FFFFFF;
-                font-size: 48;
+                color: #f1f1f1;
+                font-size: 40;
             }
 
             ]]>
@@ -68,7 +77,7 @@
     <ContentPage.Content>
         <ScrollView>
             <FlexLayout StyleClass="content" Direction="Column">
-                <Image StyleClass="poster" Source="ragnarok.jpg"/>
+                <Image StyleClass="poster" HeightRequest="200" Aspect="AspectFill" Source="ragnarok.jpg"/>
                 <FlexLayout StyleClass="summary">
                     <Label Style="{StaticResource FAStyle}" StyleClass="popularity" Text="&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;" />
                     <Label StyleClass="year" Text="2017" />
@@ -78,7 +87,7 @@
                 </FlexLayout>
 
                 <Label Margin="10" StyleClass="title" Text="Thor: Ragnarok" />
-                <Label StyleClass="description" Text="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his homeworld and the end of ..."/>
+                <Label StyleClass="description" Text="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his homeworld and the ..."/>
                 <Label StyleClass="description">
                     <Label.FormattedText>
                         <FormattedString>

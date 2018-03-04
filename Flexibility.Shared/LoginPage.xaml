@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Flexibility.Shared.LoginPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-    ios:Page.LargeTitleDisplay="Never"
+             ios:Page.LargeTitleDisplay="Never"
              >
     <ContentPage.Resources>
         <Style TargetType="Entry">

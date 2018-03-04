@@ -13,7 +13,10 @@ namespace Flexibility.Shared
         {
             menuPage = new MenuPage();
             Master = menuPage;
-            Detail = new Xamarin.Forms.NavigationPage(new LoginPage());
+            Detail = new Xamarin.Forms.NavigationPage(new LoginPage()){
+                BarBackgroundColor = Color.FromHex("#16222a"),
+                BarTextColor = Color.FromHex("#F1F1F1")
+            };
             (Detail as Xamarin.Forms.NavigationPage).On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
 
             menuPage.Menu.ItemSelected += OnItemSelected;
@@ -24,7 +27,10 @@ namespace Flexibility.Shared
             var item = e.SelectedItem as MasterPageItem;
             if (item != null)
             {
-                Detail = new Xamarin.Forms.NavigationPage((Xamarin.Forms.Page)Activator.CreateInstance(item.TargetType));
+                Detail = new Xamarin.Forms.NavigationPage((Xamarin.Forms.Page)Activator.CreateInstance(item.TargetType)){
+                    BarBackgroundColor = Color.FromHex("#16222a"),
+                    BarTextColor = Color.FromHex("#ccc")
+                };
                 (Detail as Xamarin.Forms.NavigationPage).On<Xamarin.Forms.PlatformConfiguration.iOS>().SetPrefersLargeTitles(true);
                 menuPage.Menu.SelectedItem = null;
                 IsPresented = false;
