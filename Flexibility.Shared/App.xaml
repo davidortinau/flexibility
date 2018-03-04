@@ -1,6 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Flexibility.App">
     <Application.Resources>
         <!-- Application resource dictionary -->
+        <Style x:Key="FAFontStyle" TargetType="Label">  
+            <Setter Property="FontSize">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="24"></On>
+                        <On Platform="WinRT, UWP, Android" Value="18"></On>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="VerticalTextAlignment"
+                        Value="Center" />
+            <Setter Property="HorizontalTextAlignment"
+                        Value="Center" />
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="UWP" Value="Segoe MDL2 Assets"></On>
+                        <On Platform="iOS" Value="FontAwesome"></On>
+                        <On Platform="Android" Value="FontAwesome.otf#FontAwesome"></On>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+        </Style> 
     </Application.Resources>
 </Application>

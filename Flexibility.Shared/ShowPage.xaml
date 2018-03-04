@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Flexibility.Shared.ShowPage">
+<ContentPage.Resources>
+        <Style x:Key="FAStyle" TargetType="Label">  
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="UWP" Value="Segoe MDL2 Assets"></On>
+                        <On Platform="iOS" Value="FontAwesome"></On>
+                        <On Platform="Android" Value="FontAwesome.otf#FontAwesome"></On>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <StyleSheet>
+            <![CDATA[
+            .content{
+                background-color: black;
+            }
+            
+            .poster {
+                
+            }
+
+            .summary {
+                background-color: black;
+                flex-direction: row;
+                justify-content: spacebetween;
+                height: 20;
+                margin: 10;
+            }
+
+            .popularity {
+                color: red;
+            }
+
+            .year, .rating, .length {
+                font-size: 14;
+                color: #f1f1f1;
+
+            }
+
+            .spacer {
+                width: 100;
+            }
+
+            .title {
+                color: #ffffff;
+                font-size: 24;
+            }
+
+            .description {
+                color: #ffffff;
+                margin: 10,0,10,10;
+            }
+
+            .action {
+                color: #FFFFFF;
+                font-size: 48;
+            }
+
+            ]]>
+        </StyleSheet>
+
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <FlexLayout StyleClass="content" Direction="Column">
+                <Image StyleClass="poster" Source="ragnarok.jpg"/>
+                <FlexLayout StyleClass="summary">
+                    <Label Style="{StaticResource FAStyle}" StyleClass="popularity" Text="&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;" />
+                    <Label StyleClass="year" Text="2017" />
+                    <Label StyleClass="rating" Text="PG-13" />
+                    <Label StyleClass="length" Text="2hr 10m" />
+                    <BoxView StyleClass="spacer"/>
+                </FlexLayout>
+
+                <Label Margin="10" StyleClass="title" Text="Thor: Ragnarok" />
+                <Label StyleClass="description" Text="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his homeworld and the end of ..."/>
+                <Label StyleClass="description">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Cast: " FontAttributes="Bold" />
+                            <Span Text="Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Idris Elba, Jeff Goldblum..." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label StyleClass="description">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Director: " FontAttributes="Bold" />
+                            <Span Text="Taika Waititi" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Margin="10,0,10,10" StyleClass="description">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Writers: " FontAttributes="Bold" />
+                            <Span Text="Eric Pearson, Craig Kyle, Christopher Yost" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <FlexLayout Direction="Row" FlexLayout.Grow="1" Margin="10">
+                    <Label StyleClass="action" Style="{StaticResource FAStyle}" Text="&#xf0fe;"/>
+                    <Label StyleClass="action" Style="{StaticResource FAStyle}" Margin="10, 0" Text="&#xf14d;"/>
+                </FlexLayout>
+                <BoxView FlexLayout.Grow="1" />
+
+            </FlexLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

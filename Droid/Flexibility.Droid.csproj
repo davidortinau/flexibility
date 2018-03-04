@@ -163,6 +163,7 @@
     <AndroidResource Include="Resources\drawable-nodpi\m_14.jpg" />
     <AndroidResource Include="Resources\drawable-nodpi\m_15.jpg" />
     <AndroidResource Include="Resources\drawable\hamburger.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\ragnarok.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-nodpi\" />

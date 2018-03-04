@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             Title="Registration"
+             x:Class="Flexibility.Shared.FormPage">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            .inputField {
+                flex-direction: row;
+            }
+
+            .fieldLabel {
+                height: 40;
+                width: 100;
+                background-color: #CCCCCC;
+                color: white;
+                text-align: right;
+                padding: 4;
+            }
+
+            .fieldEntry {
+                height: 40;
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="With FlexBox it is easy to place an add-on to the start of an input or a button to the end of an input. An add-on can be text or an image. An add-on is used to explain to a user what type of information should be put in the input field." />
+            <BoxView HeightRequest="1" HorizontalOptions="FillAndExpand" BackgroundColor="Black"/>
+
+            <FlexLayout StyleClass="inputField">
+                <Label Text="Username" StyleClass="fieldLabel" VerticalTextAlignment="Center" FlexLayout.Grow="1" />
+                <Entry StyleClass="fieldEntry" FlexLayout.Grow="2" BackgroundColor="Gray"/>
+            </FlexLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

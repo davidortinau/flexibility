@@ -27,5 +27,8 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="AchievementView.xaml.cs">
       <DependentUpon>AchievementView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="ReadingColumnsPage.xaml.cs">
+      <DependentUpon>ReadingColumnsPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

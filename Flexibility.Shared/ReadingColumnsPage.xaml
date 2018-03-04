@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Flexibility.Shared.ReadingColumnsPage">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+                .flex {
+                    flex-align-content: space-around;
+                }
+
+                .col {
+                    background-color: #f1f1f1;
+                    flex-basis: 33.33%;
+                }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <FlexLayout StyleClass="flex">
+            <Frame StyleClass="col" HasShadow="false">
+                <Label Text="Praesent tempor lorem dui. Vivamus fermentum ultricies massa, eget rutrum risus varius sit amet. Duis volutpat a elit eu rhoncus. Donec euismod purus nec pharetra vehicula. Ut interdum tempus risus a fringilla. Nulla pellentesque, mi non fermentum mattis, odio justo elementum arcu, quis venenatis magna mi eu odio. Vestibulum nulla odio, interdum sed lacinia scelerisque, faucibus quis est. Praesent iaculis eget leo non consectetur."/>
+            </Frame>
+            <Frame StyleClass="col" HasShadow="false">
+                <Label Text="Praesent tempor lorem dui. Vivamus fermentum ultricies massa, eget rutrum risus varius sit amet. Duis volutpat a elit eu rhoncus. Donec euismod purus nec pharetra vehicula. Ut interdum tempus risus a fringilla. Nulla pellentesque, mi non fermentum mattis, odio justo elementum arcu, quis venenatis magna mi eu odio. Vestibulum nulla odio, interdum sed lacinia scelerisque, faucibus quis est. Praesent iaculis eget leo non consectetur."/>
+            </Frame>
+            <Frame StyleClass="col" HasShadow="false">
+                <Label Text="Praesent tempor lorem dui. Vivamus fermentum ultricies massa, eget rutrum risus varius sit amet. Duis volutpat a elit eu rhoncus. Donec euismod purus nec pharetra vehicula. Ut interdum tempus risus a fringilla. Nulla pellentesque, mi non fermentum mattis, odio justo elementum arcu, quis venenatis magna mi eu odio. Vestibulum nulla odio, interdum sed lacinia scelerisque, faucibus quis est. Praesent iaculis eget leo non consectetur."/>
+            </Frame>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
