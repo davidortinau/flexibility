@@ -8,12 +8,9 @@
     <PackageReference Include="SkiaSharp.Views.Forms" Version="1.59.3" />
     <PackageReference Include="SkiaSharp" Version="1.59.3" />
     <PackageReference Include="SkiaSharp.Views" Version="1.59.3" />
-    <PackageReference Include="Xamarin.Forms" Version="2.6.0.237317-nightly" />
+    <PackageReference Include="Xamarin.Forms" Version="2.6.0.244828" />
   </ItemGroup>
   
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\work\Shapes\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="FoodPage.xaml.cs">
       <DependentUpon>AchievementsPage.xaml</DependentUpon>
@@ -30,5 +27,8 @@
     <Compile Update="ReadingColumnsPage.xaml.cs">
       <DependentUpon>ReadingColumnsPage.xaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes.csproj" />
   </ItemGroup>
 </Project>

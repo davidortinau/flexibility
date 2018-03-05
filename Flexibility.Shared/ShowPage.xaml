@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Flexibility.Shared.ShowPage"
+             BackgroundColor="#16222a"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.LargeTitleDisplay="Never"
              ios:Page.UseSafeArea="true"
@@ -21,19 +22,18 @@
         
         <StyleSheet>
             <![CDATA[
-            ^ContentPage {
-                background-color: #16222a;
-            }
-            
             .content{
-
+                align-items: start;
+                align-content: start;
+                flex-wrap: wrap;
             }
             
             .poster {
-                
+                flex-basis: 100%;
             }
 
             .summary {
+                background-color: black;
                 flex-direction: row;
                 justify-content: spacebetween;
                 height: 20;
@@ -41,32 +41,39 @@
             }
 
             .popularity {
-                color: #CC0000;
+                color: red;
+                margin: 5 10 0;
             }
 
             .year, .rating, .length {
                 font-size: 14;
                 color: #f1f1f1;
+                margin: 5 10 0;
 
             }
 
+            .break { flex-basis: 100%; height: 0;}
+
             .spacer {
-                width: 100;
+                flex-basis: 100%; height: 0;
             }
 
             .title {
-                color: #f1f1f1;
+                color: #eee;
                 font-size: 24;
+                margin: 10;
             }
 
             .description {
-                color: #ccc;
+                color: #ddd;
                 margin: 10,0,10,10;
+                flex-basis: 100%;
             }
 
             .action {
-                color: #f1f1f1;
-                font-size: 40;
+                color: #FFFFFF;
+                font-size: 48;
+                margin: 0 0 0 10;
             }
 
             ]]>
@@ -76,18 +83,16 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <FlexLayout StyleClass="content" Direction="Column">
-                <Image StyleClass="poster" HeightRequest="200" Aspect="AspectFill" Source="ragnarok.jpg"/>
-                <FlexLayout StyleClass="summary">
-                    <Label Style="{StaticResource FAStyle}" StyleClass="popularity" Text="&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;" />
-                    <Label StyleClass="year" Text="2017" />
-                    <Label StyleClass="rating" Text="PG-13" />
-                    <Label StyleClass="length" Text="2hr 10m" />
-                    <BoxView StyleClass="spacer"/>
-                </FlexLayout>
+            <FlexLayout StyleClass="content" >
+                <Image StyleClass="poster" Source="ragnarok.jpg"/>
+                <Label Style="{StaticResource FAStyle}" StyleClass="popularity" Text="&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;" />
+                <Label StyleClass="year" Text="2017" />
+                <Label StyleClass="rating" Text="PG-13" />
+                <Label StyleClass="length" Text="2hr 10m" />
+                <BoxView StyleClass="spacer"/>
 
-                <Label Margin="10" StyleClass="title" Text="Thor: Ragnarok" />
-                <Label StyleClass="description" Text="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his homeworld and the ..."/>
+                <Label StyleClass="title" Text="Thor: Ragnarok" />
+                <Label StyleClass="description" Text="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his homeworld and the end of ..."/>
                 <Label StyleClass="description">
                     <Label.FormattedText>
                         <FormattedString>
@@ -104,7 +109,7 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label Margin="10,0,10,10" StyleClass="description">
+                <Label StyleClass="description">
                     <Label.FormattedText>
                         <FormattedString>
                             <Span Text="Writers: " FontAttributes="Bold" />
@@ -112,14 +117,11 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <FlexLayout Direction="Row" FlexLayout.Grow="1" Margin="10">
-                    <Label StyleClass="action" Style="{StaticResource FAStyle}" Text="&#xf0fe;"/>
-                    <Label StyleClass="action" Style="{StaticResource FAStyle}" Margin="10, 0" Text="&#xf14d;"/>
-                </FlexLayout>
-                <BoxView FlexLayout.Grow="1" />
+                <Label StyleClass="action" Style="{StaticResource FAStyle}" Text="&#xf0fe;"/>
+                <Label StyleClass="action" Style="{StaticResource FAStyle}" Text="&#xf14d;"/>
+               <BoxView FlexLayout.Grow="1" />
 
             </FlexLayout>
         </ScrollView>
     </ContentPage.Content>
-    
 </ContentPage>
