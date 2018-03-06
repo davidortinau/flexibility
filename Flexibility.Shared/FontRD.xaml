@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Style x:Key="FAStyle" TargetType="Label">  
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="UWP" Value="Segoe MDL2 Assets"></On>
+                        <On Platform="iOS" Value="FontAwesome"></On>
+                        <On Platform="Android" Value="FontAwesome.otf#FontAwesome"></On>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+        </Style>
+</ResourceDictionary>

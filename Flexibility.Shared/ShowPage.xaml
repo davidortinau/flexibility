@@ -5,20 +5,9 @@
              BackgroundColor="#16222a"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.LargeTitleDisplay="Never"
-             ios:Page.UseSafeArea="true"
-             >
-<ContentPage.Resources>
-        <Style x:Key="FAStyle" TargetType="Label">  
-            <Setter Property="FontFamily">
-                <Setter.Value>
-                    <OnPlatform x:TypeArguments="x:String">
-                        <On Platform="UWP" Value="Segoe MDL2 Assets"></On>
-                        <On Platform="iOS" Value="FontAwesome"></On>
-                        <On Platform="Android" Value="FontAwesome.otf#FontAwesome"></On>
-                    </OnPlatform>
-                </Setter.Value>
-            </Setter>
-        </Style>
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Resources>
+        <ResourceDictionary Source="FontRD.xaml"/>
         
         <StyleSheet>
             <![CDATA[

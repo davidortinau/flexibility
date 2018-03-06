@@ -2,7 +2,7 @@
 using Xamarin.Forms.Xaml;
 using Flexibility.Shared;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+[assembly: XamlCompilation(XamlCompilationOptions.Skip)]
 namespace Flexibility
 {
     public partial class App : Application

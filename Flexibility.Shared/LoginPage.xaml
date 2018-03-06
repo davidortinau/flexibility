@@ -6,6 +6,7 @@
              ios:Page.LargeTitleDisplay="Never"
              >
     <ContentPage.Resources>
+        <ResourceDictionary Source="FontRD.xaml"/>
         <Style TargetType="Entry">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList x:Name="CommonStates">
@@ -66,15 +67,56 @@
             .InValid {
                 background-color: #ff0000;
             }
+
+            .strength {
+                margin-top: 20;
+            }
             ]]>
         </StyleSheet>
     </ContentPage.Resources>
-    <FlexLayout StyleClass="body">
-        <FlexLayout StyleClass="container">
+    <FlexLayout StyleClass="body" x:Name="Form">
+        <FlexLayout x:Name="LoginForm" StyleClass="container">
             <Label Text="Hello, Flex" StyleClass="logo"/>
             <FlexLayout StyleClass="login-form">
-                <Entry x:Name="UserNameEntry" Placeholder="UserName" />
-                <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="true"/>
+                <Entry x:Name="UserNameEntry" IsSpellCheckEnabled="false" MaxLength="7" Placeholder="UserName" />
+                <Entry x:Name="PasswordEntry" TextChanged="Handle_TextChanged" Placeholder="Password" IsPassword="true"/>
+                <Label x:Name="StrengthIndicator"
+                       Style="{StaticResource FAStyle}"
+                       StyleClass="strength"
+                       Text="" 
+                       HorizontalTextAlignment="Center" 
+                       HorizontalOptions="Center">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="StrengthStates">
+                            <VisualState x:Name="Blank" />
+                            <VisualState x:Name="VeryWeak">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="&#xf023;"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Weak">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="&#xf023;&#xf023;"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Medium">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="&#xf023;&#xf023;&#xf023;"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Strong">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="&#xf023;&#xf023;&#xf023;&#xf023;"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="VeryStrong">
+                                <VisualState.Setters>
+                                    <Setter Property="Text" Value="&#xf023;&#xf023;&#xf023;&#xf023;&#xf023;"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Label>
                 <Button Text="Log in" Clicked="Handle_Clicked"/>
             </FlexLayout>
         </FlexLayout>
