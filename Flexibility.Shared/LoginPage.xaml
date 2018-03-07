@@ -6,25 +6,8 @@
              ios:Page.LargeTitleDisplay="Never"
              >
     <ContentPage.Resources>
-        <ResourceDictionary Source="FontRD.xaml"/>
-        <Style TargetType="Entry">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList x:Name="CommonStates">
-                    <VisualStateGroup>
-                        <VisualState x:Name="Valid">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="White"></Setter>
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="Invalid">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="Red"></Setter>
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
-        </Style>
+        <ResourceDictionary Source="Resources/FontRD.xaml"/>
+        <ResourceDictionary Source="Resources/EntryValidationRD.xaml"/>
         <StyleSheet>
             <![CDATA[
             .body {
@@ -82,41 +65,11 @@
                 <Entry x:Name="PasswordEntry" TextChanged="Handle_TextChanged" Placeholder="Password" IsPassword="true"/>
                 <Label x:Name="StrengthIndicator"
                        Style="{StaticResource FAStyle}"
+                       Text="&#xf023;"
                        StyleClass="strength"
-                       Text="" 
                        HorizontalTextAlignment="Center" 
-                       HorizontalOptions="Center">
-                    <VisualStateManager.VisualStateGroups>
-                        <VisualStateGroup x:Name="StrengthStates">
-                            <VisualState x:Name="Blank" />
-                            <VisualState x:Name="VeryWeak">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="&#xf023;"/>
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Weak">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="&#xf023;&#xf023;"/>
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Medium">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="&#xf023;&#xf023;&#xf023;"/>
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Strong">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="&#xf023;&#xf023;&#xf023;&#xf023;"/>
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="VeryStrong">
-                                <VisualState.Setters>
-                                    <Setter Property="Text" Value="&#xf023;&#xf023;&#xf023;&#xf023;&#xf023;"/>
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateManager.VisualStateGroups>
-                </Label>
+                       HorizontalOptions="Center" />
+                    
                 <Button Text="Log in" Clicked="Handle_Clicked"/>
             </FlexLayout>
         </FlexLayout>

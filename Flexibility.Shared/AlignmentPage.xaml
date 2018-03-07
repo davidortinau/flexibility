@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Flexibility.Shared.AlignmentPage">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+
+            ^ContentPage {
+                padding: 20;
+            }
+            
+            BoxView {
+                
+            }
+
+            .header {
+                font-size: 24;
+                color: #16222a;
+                margin-top: 30;
+            }
+
+            ]]>
+        </StyleSheet>
+        
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label StyleClass="header" Text="Align"/>
+             <FlexLayout Direction="Column">
+                <Label Text="FlexStart" FlexLayout.AlignSelf="Start"/>
+                <Label Text="FlexCenter" FlexLayout.AlignSelf="Center"/>
+                <Label Text="FlexEnd" FlexLayout.AlignSelf="End"/>
+            </FlexLayout>
+
+            <Label StyleClass="header" Text="Justify Content"/>
+            <FlexLayout Direction="Row"
+                        JustifyContent="Start">
+                <BoxView Color="Red" WidthRequest="40" HeightRequest="40" />
+                <BoxView Color="Blue" WidthRequest="40" HeightRequest="40"/>
+                <BoxView Color="Purple" WidthRequest="40" HeightRequest="40" />
+            </FlexLayout>
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

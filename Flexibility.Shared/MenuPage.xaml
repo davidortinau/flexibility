@@ -30,6 +30,7 @@
            <ListView.ItemsSource>
                 <x:Array Type="{x:Type models:MasterPageItem}">
                     <models:MasterPageItem Title="Login" IconSource="" TargetType="{x:Type local:LoginPage}" />
+                    <models:MasterPageItem Title="Alignment" IconSource="" TargetType="{x:Type local:AlignmentPage}" />
                     <models:MasterPageItem Title="Grid" IconSource="" TargetType="{x:Type local:GridPage}" />
                     <models:MasterPageItem Title="Photos" IconSource="" TargetType="{x:Type local:PhotosPage}" />
                     <models:MasterPageItem Title="Achievements" IconSource="" TargetType="{x:Type local:AchievementsPage}" />

@@ -12,6 +12,7 @@
             .grid {
                 flex-direction: row;
                 flex-wrap: wrap;
+                padding: 5;
             }
 
             .achievement {
@@ -66,7 +67,6 @@
                 <local:AchievementView StyleClass="achievement" Achievement="Frequent Contrib" Icon="&#xf1c9;" IsAchieved="false" />
                 <local:AchievementView StyleClass="achievement" Achievement="Lab Master" Icon="&#xf0c3;" IsAchieved="false" />
                 <local:AchievementView StyleClass="achievement" Achievement="Architect" Icon="&#xf015;" IsAchieved="false" />
-
 
             </FlexLayout>
         </ScrollView>
