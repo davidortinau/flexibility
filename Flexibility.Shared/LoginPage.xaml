@@ -8,54 +8,7 @@
     <ContentPage.Resources>
         <ResourceDictionary Source="Resources/FontRD.xaml"/>
         <ResourceDictionary Source="Resources/EntryValidationRD.xaml"/>
-        <StyleSheet>
-            <![CDATA[
-            .body {
-                color: #fff;
-                align-items: center;
-                justify-content: center;
-                background-color: #16222a;
-            }
-            .container {
-                background-color: rgba(58,63,68,0.5);
-                width:300;
-                height:340;
-                flex-direction: column;
-                margin-top: -30;
-            }
-            .login-form {
-                height:260;
-                flex-direction: column;
-                margin-top: 20;
-            }
-            .logo {
-                font-size: 20;
-                margin-top: 40;
-                text-align: center;
-            }
-            entry {
-                height:50;
-                margin: 10 20 0;
-                color: #333;
-            }
-            button {
-                background-color: #CC00;
-                margin: 25 20 0;
-            }
-
-            .Valid {
-                background-color: #fff;
-            }
-
-            .InValid {
-                background-color: #ff0000;
-            }
-
-            .strength {
-                margin-top: 20;
-            }
-            ]]>
-        </StyleSheet>
+        <StyleSheet Source="Styles/LoginPage.css"/>
     </ContentPage.Resources>
     <FlexLayout StyleClass="body" x:Name="Form">
         <FlexLayout x:Name="LoginForm" StyleClass="container">

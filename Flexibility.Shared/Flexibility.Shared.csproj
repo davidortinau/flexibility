@@ -37,5 +37,6 @@
   <ItemGroup>
     <Folder Include="Utils\" />
     <Folder Include="Resources\" />
+    <Folder Include="Styles\" />
   </ItemGroup>
 </Project>
