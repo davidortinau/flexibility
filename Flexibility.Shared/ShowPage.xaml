@@ -7,7 +7,7 @@
              ios:Page.LargeTitleDisplay="Never"
              ios:Page.UseSafeArea="true">
     <ContentPage.Resources>
-        <ResourceDictionary Source="FontRD.xaml"/>
+        <ResourceDictionary Source="Resources/FontRD.xaml"/>
         
         <StyleSheet>
             <![CDATA[

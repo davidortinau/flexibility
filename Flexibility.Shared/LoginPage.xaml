@@ -21,7 +21,7 @@
                 width:300;
                 height:340;
                 flex-direction: column;
-
+                margin-top: -30;
             }
             .login-form {
                 height:260;
@@ -65,7 +65,8 @@
                 <Entry x:Name="PasswordEntry" TextChanged="Handle_TextChanged" Placeholder="Password" IsPassword="true"/>
                 <Label x:Name="StrengthIndicator"
                        Style="{StaticResource FAStyle}"
-                       Text="&#xf023;"
+                       Text=""
+                       FontSize="24"
                        StyleClass="strength"
                        HorizontalTextAlignment="Center" 
                        HorizontalOptions="Center" />

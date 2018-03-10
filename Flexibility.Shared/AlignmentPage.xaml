@@ -35,7 +35,7 @@
 
             <Label StyleClass="header" Text="Justify Content"/>
             <FlexLayout Direction="Row"
-                        JustifyContent="Start">
+                        JustifyContent="SpaceAround">
                 <BoxView Color="Red" WidthRequest="40" HeightRequest="40" />
                 <BoxView Color="Blue" WidthRequest="40" HeightRequest="40"/>
                 <BoxView Color="Purple" WidthRequest="40" HeightRequest="40" />
