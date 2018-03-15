@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Flexibility.Shared.LoginPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             ios:Page.LargeTitleDisplay="Never"
-             >
+             ios:Page.LargeTitleDisplay="Never">
     <ContentPage.Resources>
         <ResourceDictionary Source="Resources/FontRD.xaml"/>
         <ResourceDictionary Source="Resources/EntryValidationRD.xaml"/>
@@ -14,7 +13,10 @@
         <FlexLayout x:Name="LoginForm" StyleClass="container">
             <Label Text="Hello, Flex" StyleClass="logo"/>
             <FlexLayout StyleClass="login-form">
-                <Entry x:Name="UserNameEntry" IsSpellCheckEnabled="false" MaxLength="7" Placeholder="UserName" />
+                <Entry x:Name="UserNameEntry" 
+                       IsSpellCheckEnabled="false" 
+                       MaxLength="7" 
+                       Placeholder="UserName" />
                 <Entry x:Name="PasswordEntry" TextChanged="Handle_TextChanged" Placeholder="Password" IsPassword="true"/>
                 <Label x:Name="StrengthIndicator"
                        Style="{StaticResource FAStyle}"

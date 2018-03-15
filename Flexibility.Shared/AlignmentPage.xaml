@@ -3,26 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="Flexibility.Shared.AlignmentPage">
     <ContentPage.Resources>
-        <StyleSheet>
-            <![CDATA[
-
-            ^ContentPage {
-                padding: 20;
-            }
-            
-            BoxView {
-                
-            }
-
-            .header {
-                font-size: 24;
-                color: #16222a;
-                margin-top: 30;
-            }
-
-            ]]>
-        </StyleSheet>
-        
+        <StyleSheet Source="Styles/AlignmentPage.css"/>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>

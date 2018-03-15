@@ -8,41 +8,16 @@
              >
 
     <ContentPage.Resources>
-        <StyleSheet>
-            <![CDATA[
-
-            .flex {
-                flex-direction: row;
-                flex-wrap: wrap;
-                flex-align-items: stretch;
-                flex-align-content: start;
-            }
-            
-            .photo {
-                flex-basis: 33.33%;
-                height: 100;
-            }
-
-            .half {
-                flex-basis: 50%;
-                height: 150;
-            }
-
-            .full {
-                flex-basis: 100%;
-                height: 200;
-            }
-
-            Image {
-                background-color: #f1f1f1; 
-            }
-
-            ]]>
-        </StyleSheet>
-        
+        <Style x:Key="flex" TargetType="FlexLayout">
+            <Setter Property="Direction" Value="Row"/>
+            <Setter Property="Wrap" Value="Wrap"/>
+            <Setter Property="AlignItems" Value="Stretch"/>
+            <Setter Property="AlignContent" Value="Start"/>
+        </Style>
+        <StyleSheet Source="Styles/PhotosPage.css"/>
     </ContentPage.Resources>
     <ScrollView>
-        <FlexLayout StyleClass="flex">
+        <FlexLayout Style="{StaticResource flex}">
             <Image Source="m_01.jpg"
                    StyleClass="photo"
                    Aspect="AspectFill" />
@@ -56,8 +31,8 @@
                    StyleClass="photo" />
             
             <Image Source="m_03.png"
-               Aspect="AspectFill" 
-               StyleClass="photo, full" />
+                   Aspect="AspectFill" 
+                   StyleClass="photo, full" />
             
             <Image Source="m_05.jpg" 
                    Aspect="AspectFill"
@@ -118,9 +93,6 @@
             <Image Source="cat_19.jpg"
                    Aspect="AspectFill" 
                    StyleClass="photo" />
-            
-            
-            
 
         </FlexLayout>
     </ScrollView>

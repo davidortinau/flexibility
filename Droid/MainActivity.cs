@@ -24,6 +24,7 @@ namespace Flexibility.Droid
             Xamarin.Forms.Shapes.Android.Shapes.Init(this);
 
             LoadApplication(new App());
+
         }
     }
 }

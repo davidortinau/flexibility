@@ -34,9 +34,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes\Xamarin.Forms.Shapes.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utils\" />
-    <Folder Include="Resources\" />
-    <Folder Include="Styles\" />
-  </ItemGroup>
+
 </Project>

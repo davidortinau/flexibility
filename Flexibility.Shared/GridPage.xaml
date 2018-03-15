@@ -3,62 +3,67 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Flexibility.Shared.GridPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
-             ios:Page.LargeTitleDisplay="Never"
-             >
+             ios:Page.LargeTitleDisplay="Never">
     <ContentPage.Resources>
-        <StyleSheet>
-            <![CDATA[
-            
-            .section-title {
-                color: #778;
-                font-style: bold;
-                font-size: 20;
-                margin: 6 0 0 6;
-            }
-            .grid {
-                flex-wrap: wrap;
-                flex-direction: row;
-                align-items: stretch;
-                height: 180;
-            }
-            .grid-cell {
-                flex-grow: 0;
-                background-color: #eed;
-                text-align: center;
-                font-size: small;
-                color: #556;
-                height: 80;
-                vertical-text-alignment: center;
-            
-            }
-            .full { flex-basis: 100%; }
-            .half { flex-basis: 50%; background-color: cornflowerblue; }
-            .third { flex-basis: 33.33%; background-color: pink; }
-            .fourth { flex-basis: 25%; background-color: lightblue; }
-            .auto { flex-grow: 1; background-color: coral;}
-            ]]>
-        </StyleSheet>
+        <Style x:Key="gridCell" TargetType="Label">
+            <Setter Property="HeightRequest" Value="80"/>
+            <Setter Property="FlexLayout.Grow" Value="0"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="Small"/>
+            <Setter Property="TextColor" Value="#556"/>
+            <Setter Property="BackgroundColor" Value="#eed"/>
+        </Style> 
+        <Style x:Key="full" TargetType="Label"
+               BasedOn="{StaticResource gridCell}">
+            <Setter Property="FlexLayout.Basis" Value="100%"/>
+        </Style>
+        <Style x:Key="half" TargetType="Label"
+               BasedOn="{StaticResource gridCell}">
+            <Setter Property="FlexLayout.Basis" Value="50%"/>
+            <Setter Property="BackgroundColor" Value="CornflowerBlue"/>
+        </Style>
+        <Style x:Key="third" TargetType="Label"
+               BasedOn="{StaticResource gridCell}">
+            <Setter Property="FlexLayout.Basis" Value="33.33%"/>
+            <Setter Property="BackgroundColor" Value="Pink"/>
+        </Style>
+        <Style x:Key="fourth" TargetType="Label"
+               BasedOn="{StaticResource gridCell}">
+            <Setter Property="FlexLayout.Basis" Value="25%"/>
+            <Setter Property="BackgroundColor" Value="LightBlue"/>
+        </Style>
+        <Style x:Key="auto" TargetType="Label"
+               BasedOn="{StaticResource gridCell}">
+            <Setter Property="FlexLayout.Grow" Value="1"/>
+            <Setter Property="BackgroundColor" Value="Coral"/>
+        </Style>
     </ContentPage.Resources>
      <ScrollView>
         <StackLayout>
-            <Label Text="Basic Grids" StyleClass="section-title"/>
-            <FlexLayout StyleClass="grid">
-              <Label StyleClass="grid-cell, full" Text="Full"/>
-              <Label StyleClass="grid-cell, half" Text="1/2" />
-              <Label StyleClass="grid-cell, half" Text="1/2" />
-              <Label StyleClass="grid-cell, fourth" Text="1/4" />
-              <Label StyleClass="grid-cell, half" Text="1/2" />
-              <Label StyleClass="grid-cell, fourth" Text="1/4" />
-              <Label StyleClass="grid-cell, third" Text="1/3" />
-              <Label StyleClass="grid-cell, third" Text="1/3" />
-              <Label StyleClass="grid-cell, third" Text="1/3" />
-              <Label StyleClass="grid-cell, fourth" Text="1/4" />
-              <Label StyleClass="grid-cell, fourth" Text="1/4" />
-              <Label StyleClass="grid-cell, fourth" Text="1/4" />
-              <Label StyleClass="grid-cell, fourth" Text="1/4" />
-              <Label StyleClass="grid-cell, fourth" Text="1/4" />
-              <Label StyleClass="grid-cell, third" Text="1/3" />
-              <Label StyleClass="grid-cell, auto" Text="left-over" />
+            <Label Text="Basic Grids" 
+                   TextColor="#778" 
+                   FontAttributes="Bold" 
+                   FontSize="20" 
+                   Margin="6,6,0,6" />
+            <FlexLayout Wrap="Wrap" 
+                        Direction="Row">
+              <Label Style="{StaticResource full}" Text="Full"/>
+              <Label Style="{StaticResource half}" Text="1/2" />
+              <Label Style="{StaticResource half}" Text="1/2" />
+              <Label Style="{StaticResource fourth}" Text="1/4" />
+              <Label Style="{StaticResource half}" Text="1/2" />
+              <Label Style="{StaticResource fourth}" Text="1/4" />
+              <Label Style="{StaticResource third}" Text="1/3" />
+              <Label Style="{StaticResource third}" Text="1/3" />
+              <Label Style="{StaticResource third}" Text="1/3" />
+              <Label Style="{StaticResource fourth}" Text="1/4" />
+              <Label Style="{StaticResource fourth}" Text="1/4" />
+              <Label Style="{StaticResource fourth}" Text="1/4" />
+              <Label Style="{StaticResource fourth}" Text="1/4" />
+              <Label Style="{StaticResource fourth}" Text="1/4" />
+              <Label Style="{StaticResource third}" Text="1/3" />
+              <Label Style="{StaticResource auto}" Text="left-over" />
             </FlexLayout>
         </StackLayout>
     </ScrollView>
