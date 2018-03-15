@@ -16,8 +16,30 @@
                 <Entry x:Name="UserNameEntry" 
                        IsSpellCheckEnabled="false" 
                        MaxLength="7" 
-                       Placeholder="UserName" />
-                <Entry x:Name="PasswordEntry" TextChanged="Handle_TextChanged" Placeholder="Password" IsPassword="true"/>
+                       Placeholder="UserName">
+                       <Entry.TextColor>
+                           <OnPlatform x:TypeArguments="Color">
+                               <On Platform="Android" Value="#f1f1f1"/>
+                           </OnPlatform>
+                       </Entry.TextColor>
+                        <Entry.PlaceholderColor x:TypeArguments="Color">
+                            <OnPlatform x:TypeArguments="Color">
+                                   <On Platform="Android" Value="#999"/>
+                               </OnPlatform>
+                        </Entry.PlaceholderColor>
+                </Entry>
+                <Entry x:Name="PasswordEntry" TextChanged="Handle_TextChanged" Placeholder="Password" IsPassword="true">
+                    <Entry.TextColor>
+                           <OnPlatform x:TypeArguments="Color">
+                               <On Platform="Android" Value="#f1f1f1"/>
+                           </OnPlatform>
+                    </Entry.TextColor>
+                    <Entry.PlaceholderColor x:TypeArguments="Color">
+                        <OnPlatform x:TypeArguments="Color">
+                               <On Platform="Android" Value="#999"/>
+                           </OnPlatform>
+                    </Entry.PlaceholderColor>
+                </Entry>
                 <Label x:Name="StrengthIndicator"
                        Style="{StaticResource FAStyle}"
                        Text=""
