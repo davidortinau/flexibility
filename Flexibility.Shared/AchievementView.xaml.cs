@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using SkiaSharp;
-using SkiaSharp.Views.Forms;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Media;
 
 
