@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Grid xmlns="http://xamarin.com/schemas/2014/forms" 
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-      WidthRequest="80" HeightRequest="110" Padding="0"
+      WidthRequest="90" HeightRequest="110" Padding="0"
              xmlns:shapes="clr-namespace:Xamarin.Forms.Shapes;assembly=Xamarin.Forms.Shapes"
             x:Class="Flexibility.Shared.AchievementView">
     <Grid.Resources>
@@ -30,20 +30,26 @@ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
         </Style> 
     </Grid.Resources>
     <Grid.RowDefinitions>
-        <RowDefinition Height="80"/>
+        <RowDefinition Height="90"/>
         <RowDefinition Height="20"/>
     </Grid.RowDefinitions>
 
-    <shapes:Ellipse x:Name="Circle"
-                    Margin="5" 
-                    Grid.Row="0" 
-                    WidthRequest="80" 
-                    HeightRequest="80" Fill="Black"/>    
-     <Label 
-        Style="{StaticResource FAFontStyle}" TextColor="White"
-        Grid.Row="0" Text="{Binding Icon}" />
-    <Label Text="{Binding Achievement}" Grid.Row="1" HeightRequest="20" FontSize="12" HorizontalTextAlignment="Center"/>
-
+    <Button Grid.Row="0"
+            BorderColor="#fff"
+            BorderWidth="1"
+            BackgroundColor="#4D000000"
+            HeightRequest="90" CornerRadius="45"
+            Style="{StaticResource IconFontButton}"
+            FontSize="32"
+            Text="{Binding Icon}"/>
+    
+     <Label Grid.Row="1"
+            Text="{Binding Achievement}" 
+            Margin="0,4,0,0"
+            HeightRequest="20"
+            FontSize="9" 
+            HorizontalTextAlignment="Center" 
+            HorizontalOptions="CenterAndExpand"/>
 
 
 </Grid>

@@ -6,25 +6,31 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.UseSafeArea="true" Title="Achievements">
     <ContentPage.Resources>
-        <Style TargetType="FlexLayout">
-            <Setter Property="Direction" Value="Row"/>
-            <Setter Property="Wrap" Value="Wrap"/>
-            <Setter Property="Padding" Value="5"/>
-        </Style>
+
         <Style x:Key="AchievementViewStyle" TargetType="Grid">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="HeightRequest" Value="100"/>
-            <Setter Property="WidthRequest" Value="80"/>
+            <Setter Property="WidthRequest" Value="90"/>
         </Style>
+        <StyleSheet>
+            <![CDATA[
+                #container {
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    margin: 20 0;
+                }
+            ]]>
+        </StyleSheet>
     </ContentPage.Resources>
     <StackLayout>
         <ScrollView>
-            <FlexLayout>
+            
+            <FlexLayout x:Name="container">
                 <local:AchievementView Style="{StaticResource AchievementViewStyle}" Achievement="First Issue" Icon="&#xf1fc;" IsAchieved="true" />
                 <local:AchievementView Style="{StaticResource AchievementViewStyle}" Achievement="First PR" Icon="&#xf109;" IsAchieved="true" />
                 <local:AchievementView Style="{StaticResource AchievementViewStyle}" Achievement="Masher" Icon="&#xf255;" IsAchieved="false" />
 
-                <local:AchievementView Style="{StaticResource AchievementViewStyle}" Achievement="Novice Contributor" Icon="&#xf3a5;" IsAchieved="true" />
+                <local:AchievementView Style="{StaticResource AchievementViewStyle}" Achievement="Novice Contributor" Icon="&#xf291;" IsAchieved="true" />
                 <local:AchievementView Style="{StaticResource AchievementViewStyle}" Achievement="Reviewer" Icon="&#xf075;" IsAchieved="true" />
                 <local:AchievementView Style="{StaticResource AchievementViewStyle}" Achievement="Tester" Icon="&#xf05b;" IsAchieved="false" />
 

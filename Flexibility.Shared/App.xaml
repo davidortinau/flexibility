@@ -25,5 +25,37 @@
                 </Setter.Value>
             </Setter>
         </Style> 
+
+        <Style
+            x:Key="NakedButton"
+            TargetType="Button">
+            <Setter
+                Property="BackgroundColor"
+                Value="Transparent" />
+            <Setter
+                Property="TextColor"
+                Value="#fff" />
+            <Setter 
+                Property="BorderColor"
+                Value="Transparent"/>
+            <Setter 
+                Property="BorderWidth"
+                Value="0"/>
+            <Setter
+                Property="FontSize"
+                Value="16" />
+        </Style>
+
+        <Style x:Key="IconFontButton" BasedOn="{StaticResource NakedButton}" TargetType="Button">  
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="UWP" Value="Segoe MDL2 Assets"></On>
+                        <On Platform="iOS" Value="FontAwesome"></On>
+                        <On Platform="Android" Value="FontAwesome.otf#FontAwesome"></On>
+                    </OnPlatform>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

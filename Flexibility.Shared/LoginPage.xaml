@@ -4,11 +4,13 @@
              x:Class="Flexibility.Shared.LoginPage"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.LargeTitleDisplay="Never">
+    
     <ContentPage.Resources>
         <ResourceDictionary Source="Resources/FontRD.xaml"/>
         <ResourceDictionary Source="Resources/EntryValidationRD.xaml"/>
         <StyleSheet Source="Styles/LoginPage.css"/>
     </ContentPage.Resources>
+    
     <FlexLayout StyleClass="body" x:Name="Form">
         <FlexLayout x:Name="LoginForm" StyleClass="container">
             <Label Text="Hello, Flex" StyleClass="logo"/>

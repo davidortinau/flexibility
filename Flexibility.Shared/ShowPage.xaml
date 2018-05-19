@@ -5,7 +5,7 @@
              BackgroundColor="#16222a"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              ios:Page.LargeTitleDisplay="Never"
-             ios:Page.UseSafeArea="true">
+             ios:Page.UseSafeArea="false">
     <ContentPage.Resources>
         <ResourceDictionary Source="Resources/FontRD.xaml"/>
         <StyleSheet Source="Styles/ShowPage.css" />
@@ -13,16 +13,16 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <FlexLayout StyleClass="content" >
-                <Image StyleClass="poster" Source="ragnarok.jpg"/>
+            <FlexLayout StyleClass="content">
+                <Image StyleClass="poster" Source="seattle.jpg"/>
                 <Label Style="{StaticResource FAStyle}" StyleClass="popularity" Text="&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;" />
                 <Label StyleClass="year" Text="2017" />
                 <Label StyleClass="rating" Text="PG-13" />
                 <Label StyleClass="length" Text="2hr 10m" />
                 <BoxView StyleClass="spacer"/>
 
-                <Label StyleClass="title" Text="Thor: Ragnarok" />
-                <Label StyleClass="description" Text="Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his homeworld and the end of ..."/>
+                <Label StyleClass="title" Text="Exploring Lake Union" />
+                <Label StyleClass="description" Text="It was a night not unlike many others. As the sun settled onto the horizon,the kites began to descend. Bikes brought people to the best overlook of the city skyline. Dodging selfies became to challenge of the day."/>
                 <Label StyleClass="description">
                     <Label.FormattedText>
                         <FormattedString>
