@@ -11,7 +11,7 @@ namespace Flexibility
 		{
 			InitializeComponent();
 
-			MainPage = new MasterPage();
+            MainPage = new Shared.FlexFlyoutPage();
 
 			//MainPage = new LoginPage();
 			//MainPage = new PhotosPage();

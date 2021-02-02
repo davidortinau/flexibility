@@ -5,14 +5,15 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace Flexibility.Shared
 {
-    public class MasterPage : MasterDetailPage
+    public class FlexFlyoutPage :
+        Xamarin.Forms.FlyoutPage
     {
         MenuPage menuPage;
 
-        public MasterPage()
+        public FlexFlyoutPage()
         {
             menuPage = new MenuPage();
-            Master = menuPage;
+            Flyout = menuPage;
             Detail = new Xamarin.Forms.NavigationPage(new LoginPage()){
                 BarBackgroundColor = Color.FromHex("#16222a"),
                 BarTextColor = Color.FromHex("#F1F1F1")
